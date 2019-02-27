@@ -3,3 +3,6 @@ vsp = 0;
 grv = 0.3;
 walksp = 3;
 
+jumps = 0;
+maxJumps = 2;
+

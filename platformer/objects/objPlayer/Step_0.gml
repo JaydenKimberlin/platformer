@@ -3,6 +3,7 @@ key_left = keyboard_check(ord("A"));
 key_right = keyboard_check(ord("D"));
 key_jump = keyboard_check_pressed(vk_space);
 
+
 //Calc Movement
 var move = key_right - key_left;
 
@@ -10,9 +11,17 @@ hsp = move * walksp;
 
 vsp = vsp + grv;
 
-if (place_meeting(x,y+1,objWall)) && (key_jump)
+//Jumping
+
+if (place_meeting(x,y+1,objWall)) //If you're on the ground...
 {
-	vsp = -5;
+	jumps = maxJumps; //You have 2 jumps
+}
+
+if(jumps > 0) && (key_jump) //If your jumps are greater than 0 (2) and you jump
+{
+	jumps -= 1; //Remove one from the jump count
+	vsp = -5; //Jump 5 high
 }
 
 //Horizontal Collision
