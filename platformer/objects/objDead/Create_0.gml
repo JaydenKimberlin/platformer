@@ -1,10 +1,8 @@
 hsp = 0;
 vsp = 0;
 grv = 0.3;
-walksp = 3;
+done = 0;
 
-controller = 0;
-
-jumps = 0;
 maxJumps = 2;
 
+image_speed = 0;
